@@ -1,8 +1,8 @@
 
 
 <html>
-<head>
 
+<head>
 	<style>
 		table {
 			text-align: center;
@@ -26,16 +26,20 @@
 
 	</style>
 </head>
+
 <body>
 	<div style="text-align:center;"><h3><strong>To ensure stable audio controls, we suggest using Google Chrome or Firefox to view this page.</strong></h3></div>
 	<div style="text-align:center;"><br><br><br><br>
+
+		<div style="text-align:center;"><caption><h2><b><u>Pitch Glide</u></b></h2></caption></div>
 		<label for="audio-control_1">One octave glide on Clarinet:</label>
 		<br><br>
 		<audio id="audio-control_1" controls>
 			<source src="Audios/Clarinet_Glide_from_C4_to_C5.wav?raw=true" type="audio/wav">
 			Your browser does not support the audio element.
 		</audio>
-		<br><br><br><br><br>
+		<br><br><br><br><br><br><br>
+		<div style="text-align:center;"><caption><h2><b><u>Rythmic Pitch Bend</u></b></h2></caption></div>
 		<label for="audio-control_3">Rhythmic pitch change on one note on Clarinet. The rhythm is: &#x2669 &#x266A </label>
 		<br><br>
 		<audio id="audio-control_3" controls>
@@ -49,7 +53,9 @@
 
 
 		<table style="border-collapse:collapse;">
-			<div style="text-align:center;"><caption><h2><b><u>Articulations on Violins</u></b></h2></caption></div>
+			<div style="text-align:center;"><caption><h2><b><u>Articulations on Violins</u></b></h2><br>Examples of high-fidelity reproduction of articulations on the violin, using control variables.<br><br></caption></div>
+			
+
 			
 			<tr> 
 				<div style="text-align:center">
@@ -123,12 +129,12 @@
 			</tr>
 
 		</table>
-		<br><br><br><br><br><br>
+		<br><br><br><br><br><br><br>
 
 
 
 		<table style="border-collapse:collapse; ">
-			<div style="text-align:center;"><caption><h2><b><u>Woodwinds</u></b></h2></caption></div>
+			<div style="text-align:center;"><caption><h2><b><u>Woodwinds</u></b></h2><br>Examples of high-fidelity reproduction of woodwinds, using control variables.<br><br></caption></div>
 			
 			<tr> 
 				<div style="text-align:center">
@@ -203,13 +209,13 @@
 
 		</table>
 
-		<br><br><br><br><br><br>
+		<br><br><br><br><br><br><br>
 		<table style="border-collapse:collapse;">
-			<div style="text-align:center;"><caption><h2><b><u>Envelope Transfer</u></b></h2></caption></div>
+			<div style="text-align:center;"><caption><h2><b><u>Envelope Transfer</u></b></h2><br>An Example of transfering amplitude envelope from one instrument (Tremolo on flute) to another (bassoon). <br><br></caption></div>
 				<tr>
 					
 					<td> <audio id="audio-control_321" controls><source src="Audios/Ground_Truth_Bassoon_Tenuto_C2.wav?raw=true" type="audio/wav">Your browser does not support the audio element.</audio></td>
-					<td>Before envelope transfer: Bassoon C2 generated using the ground-truth envelope<br><img src="Images/Bn_C2_Generated_TruthEnv.jpg"></td>
+					<td>Step 0. Before envelope transfer: Bassoon C2 generated using the ground-truth envelope<br><img src="Images/Bn_C2_Generated_TruthEnv.jpg"></td>
 				</tr>
 				<tr>
 					<td> <audio id="audio-control_321" controls><source src="Audios/Ground_Truth_Flute_Tremolo_C4.wav?raw=true" type="audio/wav">Your browser does not support the audio element.</audio></td>
@@ -217,7 +223,7 @@
 				</tr>
 				<tr>
 					<td> <audio id="audio-control_321" controls><source src="Audios/Generated_Bn_Tremolo_C2.wav?raw=true" type="audio/wav">Your browser does not support the audio element.</audio></td>
-					<td>Step 2. Bassoon C2 tremolo generated using the Flute C4 tremolo envelope <br><img src="Images/Bn_C2_Generated_FlC4TremEnv.jpg"></td>
+					<td>Step 2. Bassoon C2 tremolo generated using the Flute C4 tremolo envelope<br><img src="Images/Bn_C2_Generated_FlC4TremEnv.jpg"></td>
 				</tr>
 			</div>
 		</table>
@@ -226,12 +232,4 @@
 	
 	</div>
 </body>
-</html>
-
-
-
-
-
-
-
 </html>
