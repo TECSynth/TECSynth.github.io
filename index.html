@@ -36,8 +36,8 @@
 
 
       	
-	    .bottom-center {
-		  background-color:  rgba(223, 221, 233, 0.4);  
+	    .section-bar {
+		  background-color:  rgba(223, 221, 233, 0.5);  
 		  height: 10vh; /* Set height to 20% of viewport height */
 		  width: 100%;
 		  display: flex;
@@ -47,19 +47,24 @@
 		  position: relative;
 		}
 
-		.bottom-center p {
+		.section-bar p {
 		  margin: 0; /* Remove default margin */
 		}
 	  	
+		.page-img {
+		  width: 30vw;
+		  height: auto;
+		}
 
 	</style>
 </head>
 
 <body>
 	<div style="text-align:center;"><h3><strong>To ensure stable audio controls, we suggest using Google Chrome or Firefox to view this page.</strong></h3></div>
+	<br><br>
 	<div style="text-align:center;">
 
-		<section class="bottom-center"><caption><h2><b></b></h2></caption></section>	
+		<section class="section-bar"><caption><h2><b></b></h2></caption></section>	
 		<br><br>
 		
 		<table style="border-collapse:collapse;">
@@ -81,7 +86,7 @@
 
 
 
-		<section class="bottom-center"> <caption><h2><b></b></h2></caption></section>	
+		<section class="section-bar"> <caption><h2><b></b></h2></caption></section>	
 		<br><br>
 		<table style="border-collapse:collapse;">
 			<div style="text-align:center;"><caption><h2><b><u>Rhythmic Pitch Bend</u></b></h2><br><br> <b> Rhythmic pitch change on C4 to 8 hertz higher on Clarinet using "pitch" control variable. The rhythm of pitch change is: &#x2669 &#x266A </b><br><br><br></caption>
@@ -104,7 +109,7 @@
 	</div>	
 	<div style="text-align:center;">
 
-		<section class="bottom-center"><caption><h2><b></b></h2></caption></section>	
+		<section class="section-bar"><caption><h2><b></b></h2></caption></section>	
 		<br><br>
 		<table style="border-collapse:collapse;">
 			<div style="text-align:center;"><caption><h2><b><u>Articulations on Violins</u></b></h2> <br><br><b> Examples of high-fidelity reproduction of articulations on the violin, using control variables. </b> <br><br></caption></div>
@@ -184,7 +189,7 @@
 
 		</table>
 		<br><br><br><br><br>
-		<section class="bottom-center"><caption><h2><b></b></h2></caption></section>	
+		<section class="section-bar"><caption><h2><b></b></h2></caption></section>	
 		<br><br>
 
 		<table style="border-collapse:collapse; ">
@@ -264,28 +269,76 @@
 		</table>
 
 		<br><br><br><br><br>
-		<section class="bottom-center"><caption><h2><b></b></h2></caption></section>	
+		<section class="section-bar"><caption><h2><b></b></h2></caption></section>	
 		<br><br>
 		<table style="border-collapse:collapse;">
 			<div style="text-align:center;"><caption><h2><b><u>Envelope Transfer</u></b></h2><br> <br><b>An Example of transfering amplitude envelope from one instrument (Tremolo on flute) to another (bassoon).</b> <br><br></caption>
 				<tr>
-					<td>To compare with step 2 output: Bassoon C2 generated using the ground-truth envelope<br><img src="Images/Bn_C2_Generated_TruthEnv.jpg"></td>
+					<td>To compare with step 2 output: Bassoon C2 generated using the ground-truth envelope<br><img src="Images/Bn_C2_Generated_TruthEnv.jpg" class="page-img"></td>
 					<td> <audio id="audio-control_321" controls><source src="Audios/Ground_Truth_Bassoon_Tenuto_C2.wav?raw=true" type="audio/wav">Your browser does not support the audio element.</audio></td>
 					
 				</tr>
 				<tr>
-					<td><b>Step 1.</b> Get envelope from Flute C4 to be transfered to Bassoon C2<br><img src="Images/Fl_C4_Envelope.jpg"></td>
+					<td><b>Step 1.</b> Get envelope from Flute C4 to be transfered to Bassoon C2<br><img src="Images/Fl_C4_Envelope.jpg" class="page-img"></td>
 					<td> <audio id="audio-control_321" controls><source src="Audios/Ground_Truth_Flute_Tremolo_C4.wav?raw=true" type="audio/wav">Your browser does not support the audio element.</audio></td>
 				</tr>
 				<tr>
-					<td><b>Step 2.</b> Bassoon C2 tremolo generated using the Flute C4 tremolo envelope<br><img src="Images/Bn_C2_Generated_FlC4TremEnv.jpg"></td>
+					<td><b>Step 2.</b> Bassoon C2 tremolo generated using the Flute C4 tremolo envelope<br><img src="Images/Bn_C2_Generated_FlC4TremEnv.jpg" class="page-img"></td>
 
 					<td> <audio id="audio-control_321" controls><source src="Audios/Generated_Bn_Tremolo_C2.wav?raw=true" type="audio/wav">Your browser does not support the audio element.</audio></td>
 				</tr>
 			</div>
 		</table>
 
-		<br><br><br><br><br><br><br>
+		<br><br><br><br><br>
+
+		<section class="section-bar"><caption><h2><b></b></h2></caption></section>	
+		<br><br>
+		<table style="border-collapse:collapse;">
+			<div style="text-align:center;">
+
+				<caption><h2><b><u>Customized Envelope</u></b></h2><br> <br><b>Example 1: Applying a customized amplitude envelope to generate a flute C5 tremolo</b> <br><br>
+				<tr>
+					<td>The ground-truth waveform of a flute C5 tremolo<br><img src="Images/Fl_C5_Tremolo_GroudTruth.jpg" class="page-img"></td>
+					<td> <audio id="audio-control_421" controls><source src="Audios/Ground_Truth_Flute_Tremolo_C5.wav?raw=true" type="audio/wav">Your browser does not support the audio element.</audio></td>
+					
+				</tr>
+				<tr>
+					<td><b>Step 1.</b> A customized envelope to apply to the generated waveform<br><img src="Images/Customized_Envelope_2.jpg" class="page-img"></td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td><b>Step 2.</b> Flute C5 tremolo generated after applying the customized envelope<br><img src="Images/Fl_C5_Tremolo_Generated_CustomizedEnv.jpg" class="page-img"> </td>
+
+					<td> <audio id="audio-control_421" controls><source src="Audios/Generated_Flute_Tremolo_C5_CustomizedEnv.wav?raw=true" type="audio/wav">Your browser does not support the audio element.</audio></td>
+				</tr>
+			</div>
+		</table>
+
+		<br><br><br>
+		<table style="border-collapse:collapse;">
+			<div style="text-align:center;">
+
+				<caption><h2><b><u></u></b></h2><br> <br><b>Example 2: Applying a customized amplitude envelope to generate an Oboe C4 </b> <br><br>
+				<tr>
+					<td>The ground-truth waveform of an Oboe C4 <br><img src="Images/Ob_C4_GroudTruth.jpg" class="page-img"></td>
+					<td> <audio id="audio-control_421" controls><source src="Audios/Ground_Truth_Oboe_C4.wav?raw=true" type="audio/wav">Your browser does not support the audio element.</audio></td>
+					
+				</tr>
+				<tr>
+					<td><b>Step 1.</b> A customized envelope to apply to the generated waveform<br><img src="Images/Customized_Envelope_2.jpg" class="page-img"></td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td><b>Step 2.</b> Oboe C4 generated after applying the customized envelope<br><img src="Images/Ob_C4_Generated_CustomizedEnv.jpg" class="page-img"> </td>
+
+					<td> <audio id="audio-control_421" controls><source src="Audios/Generated_Oboe_C4_CustomizedEnv.wav?raw=true" type="audio/wav">Your browser does not support the audio element.</audio></td>
+				</tr>
+			</div>
+		</table>
+
+
+
 	
 	</div>
 </body>
